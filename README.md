@@ -1,18 +1,20 @@
-# bob.paper.icb2019.gradgpad [![Build Status](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad.svg?branch=master)](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad) [![Doc](http://img.shields.io/badge/docs-latest-orange.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/)
+# bob.paper.icb2019.gradgpad 
+
+<!---
+[![Build Status](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad.svg?branch=master)](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad) [![Doc](http://img.shields.io/badge/docs-latest-orange.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/)
+-->
  
 [Bob](https://www.idiap.ch/software/bob/) package to reproduce the work carried out in the paper [Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal](https://arxiv.org/abs/1904.06213) accepted in the [12th IAPR International Conference On Biometrics](http://www.icb2019.org/).
 
-
-:construction::construction::construction::construction:
-
+:construction:
+~~~
 The code will be available at the beginning of May.
 
 Ongoing tasks:
 	- Migrating to python 3
 	- Preparing the environment (with conda)
 	- Preparing docker image
-
-:construction::construction::construction::construction:
+~~~
 
 ## Abstract 
 
@@ -42,19 +44,17 @@ Hope the following table will help you download publicly available datasets.
 
 | Dataset | Link | 
 | --- | --- | 
-| CASIA-FASD | link |
-| REPLAY-ATTACK | link | 
-| 3DMAD | link | 
-| MSU-MFSD | link | 
-| UVAD | link | 
-| REPLAY-MOBILE | link | 
-| HKBU | link |
-| OULU-NPU  | link | 
-| SMAD  | link |  
-| ROSE-YOUTU | link | 
-| SIW | link | 
-| CS-MAD | link | 
-| CASIA-SURF  | link |  
+| CASIA-FASD | [http://www.cbsr.ia.ac.cn/english/FASDB_Agreement/Agreement.pdf](http://www.cbsr.ia.ac.cn/english/FASDB_Agreement/Agreement.pdf) |
+| REPLAY-ATTACK | [https://www.idiap.ch/dataset/replayattack](https://www.idiap.ch/dataset/replayattack) | 
+| 3DMAD | [https://www.idiap.ch/dataset/3dmad](https://www.idiap.ch/dataset/3dmad) | 
+| MSU-MFSD | [http://biometrics.cse.msu.edu/Publications/Databases/MSUMobileFaceSpoofing/index.htm](http://biometrics.cse.msu.edu/Publications/Databases/MSUMobileFaceSpoofing/index.htm) | 
+| UVAD | [https://recodbr.wordpress.com/code-n-data/#UVAD](https://recodbr.wordpress.com/code-n-data/#UVAD) | 
+| REPLAY-MOBILE | [https://www.idiap.ch/dataset/replay-mobile](https://www.idiap.ch/dataset/replay-mobile) | 
+| HKBU (v1) | [http://rds.comp.hkbu.edu.hk/mars/](http://rds.comp.hkbu.edu.hk/mars/) |
+| OULU-NPU  | [https://sites.google.com/site/oulunpudatabase/](https://sites.google.com/site/oulunpudatabase/) | 
+| ROSE-YOUTU | [http://rose1.ntu.edu.sg/Datasets/faceLivenessDetection.asp](http://rose1.ntu.edu.sg/Datasets/faceLivenessDetection.asp) | 
+| SIW | [http://cvlab.cse.msu.edu/spoof-in-the-wild-siw-face-anti-spoofing-database.html](http://cvlab.cse.msu.edu/spoof-in-the-wild-siw-face-anti-spoofing-database.html) | 
+| CS-MAD | [https://www.idiap.ch/dataset/csmad](https://www.idiap.ch/dataset/csmad) | 
 
 
 ## Reproducible Research
