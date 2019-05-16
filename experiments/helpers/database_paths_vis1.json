@@ -1,0 +1,14 @@
+{
+    "CASIA_FASD_PATH": "/media/data/databases/BBDD/AntiSpoofing/CASIA_FASD",
+    "REPLAY_ATTACK_PATH": "/media/data/databases/BBDD/AntiSpoofing/replay-attack/Movies",
+    "THREEDMAD_PATH": "/media/data/databases/BBDD/AntiSpoofing/3DMAD/Data",
+    "MSU_MFSD_PATH": "/media/data/databases/BBDD/AntiSpoofing/MSU_MFSD/MSU-MFSD/scene01",
+    "UVAD_PATH": "/media/data/databases/BBDD/AntiSpoofing/UVAD",
+    "REPLAY_MOBILE_PATH": "/media/data/databases/BBDD/AntiSpoofing/replay-mobile/database",
+    "HKBU_PATH": "/media/data/databases/BBDD/AntiSpoofing/HKBU",
+    "OULU_NPU_PATH": "/media/data/databases/BBDD/AntiSpoofing/OULU_NPU",
+    "SMAD": "/media",
+    "ROSE_YOUTU_PATH": "/media/data/databases/BBDD/AntiSpoofing/RoseYoutu2008",
+    "SIW_PATH": "/media/data/databases/BBDD/AntiSpoofing/SiW",
+    "CSMAD_PATH": "/media/data/databases/BBDD/AntiSpoofing/CSMAD"
+}
