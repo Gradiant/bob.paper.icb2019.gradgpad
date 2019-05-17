@@ -21,7 +21,7 @@ res
 .coverage
 htmlcov
 .scannerwork
-result
+doc/examples
 resources_bob_paper_icb2019_gradgpad
 resources_bob_paper_icb2019_gradgpad.zip
 result

@@ -34,6 +34,9 @@ if sphinx.__version__ >= "1.4.1":
 else:
     extensions.append('sphinx.ext.pngmath')
 
+import shutil
+shutil.copy('../rr.sh', 'examples/rr.sh')
+
 # Be picky about warnings
 nitpicky = True
 
