@@ -36,6 +36,7 @@ else:
 
 import shutil
 shutil.copy('../rr.sh', 'examples/rr.sh')
+shutil.copy('../ci.sh', 'examples/ci.sh')
 
 # Be picky about warnings
 nitpicky = True

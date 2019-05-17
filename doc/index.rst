@@ -109,6 +109,7 @@ Documentation
    :maxdepth: 2
 
    installation
+   getting_started
    reproducible_research
    grad_gpad
    acknowledgements

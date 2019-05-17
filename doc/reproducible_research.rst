@@ -5,10 +5,6 @@
 Reproducible Research
 =====================
 
-
- Besides, it also provides score files and features for Color-based and Quality-based PAD algorithms, the systems reported in our work.
-
-
 The easiest way to reproduce the result presented in the paper is using the bash script :code:`rr.sh`.
 
 .. literalinclude:: examples/rr.sh

@@ -1,20 +1,7 @@
-# bob.paper.icb2019.gradgpad 
+# bob.paper.icb2019.gradgpad [![Build Status](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad.svg?branch=master)](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad) [![Doc](http://img.shields.io/badge/docs-latest-green.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/) 
 
-<!---
-[![Build Status](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad.svg?branch=master)](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad) [![Doc](http://img.shields.io/badge/docs-latest-orange.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/)
--->
  
 [Bob](https://www.idiap.ch/software/bob/) package to reproduce the work carried out in the paper [Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal](https://arxiv.org/abs/1904.06213) accepted in the [12th IAPR International Conference On Biometrics](http://www.icb2019.org/).
-
-:construction:
-~~~
-The code will be available at the beginning of May.
-
-Ongoing tasks:
-	- Migrating to python 3
-	- Preparing the environment (with conda)
-	- Preparing docker image
-~~~
 
 ## Abstract 
 
@@ -57,104 +44,8 @@ Hope the following table will help you download publicly available datasets.
 | CS-MAD | [https://www.idiap.ch/dataset/csmad](https://www.idiap.ch/dataset/csmad) | 
 
 
-## Installation 
-
-#### Installation With Docker 
-
-The fastest way to contact the package is to use docker. 
-
-You can download the docker image from dockerhub
-
-~~~
-docker pull acostapazo/bob.paper.icb2019.gradgpad:latest 
-~~~
-
-or build it from Dockerfile
-
-~~~
-docker build --no-cache -t acostapazo/bob.paper.icb2019.gradgpad:latest  .
-~~~
-
-To check if everything is alright you can run the ci.sh script with:
-
-~~~
-docker run -v $(pwd):/bob.paper.icb2019.gradgpad acostapazo/bob.gradiant.face.databases:latest bin/bash -c "source activate bob.gradiant.face.databases; cd bob.gradiant.pad.evaluator; ./ci.sh"
-~~~
-
-#### Installation With Conda
+For more information about installation, reproducible research and how to use the GRAD-GPAD framework to evaluate your algorithms, please visit the official documentation [![Doc](http://img.shields.io/badge/docs-latest-green.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/).
 
 
-1. Install conda -> https://conda.io/docs/user-guide/install/index.html
-
-2. Create the conda env
-
-~~~
-    conda env create -f envs/ubuntu_environment.yml
-~~~
-
-or if run this in macosx platform
-
-~~~
-    conda env create -f envs/mac_environment.yml
-~~~
-
-3. Activate the environment and add some channels
-
-~~~
-   source activate bob.paper.icb2019.gradgpad
-~~~
-
-
-## Test
-
-~~~
-  bin/nosetests -v
-~~~
-
-## Clean
-
-~~~
-  python clean.py
-~~~
-
-## Coverage
-
-~~~  
-  bin/coverage run -m unittest discover
-  bin/coverage html -i
-  bin/coverage xml -i
-~~~
-
-Coverage result will be store on htmlcov/.
-
-## Doc
-
-~~~
-bin/sphinx-build -b html doc/ doc/html/
-~~~
-
-
-## Reproducible Research
-
-1. Build the package 
-    
-~~~
-    python clean.py
-    python bootstrap-buildout.py
-    bin/buildout
-~~~
-
-2. Download the resources
-
-~~~
-bin/download_resources.py -v
-~~~
- 
-3. Execute the experiments
-
-~~~
- bin/algorithmic_constrained_evaluation.py -r experiments/quality_based/configuration_msu_iqm_face_cropped.py 
- bin/algorithmic_constrained_evaluation.py -r experiments/color_based/configuration_boulkafanet_face_cropped.py 
-~~~
 
 
