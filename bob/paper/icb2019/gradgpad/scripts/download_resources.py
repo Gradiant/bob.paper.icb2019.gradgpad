@@ -7,7 +7,7 @@ import coloredlogs
 from bob.paper.icb2019.gradgpad import parser
 import subprocess
 
-SCORES_URL = 'https://portal.gradiant.org/GradBox/index.php/s/cmGFGkheEDQlFVn/download'
+SCORES_URL = 'https://intranet.gradiant.org/GradBox/index.php/s/XiTM7bkHxcDFiPf/download'
 SCORES_FOLDER = 'resources_bob_paper_icb2019_gradgpad'
 
 
