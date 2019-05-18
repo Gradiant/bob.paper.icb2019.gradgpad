@@ -53,7 +53,8 @@ Doc
 
     bin/sphinx-build -b html doc/ doc/html/
 
-
+Continuous Integration
+----------------------
 
 In the following script (:code:`ci.sh`) you can check the different stages that are evaluated over the continuous integration pipeline:
 

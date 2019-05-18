@@ -35,7 +35,7 @@ if sphinx.__version__ >= "1.4.1":
 else:
     extensions.append('sphinx.ext.pngmath')
 
-os.makedirs('examples')
+os.makedirs('examples', exist_ok=True)
 shutil.copy('../rr.sh', 'examples/rr.sh')
 shutil.copy('../ci.sh', 'examples/ci.sh')
 shutil.copy('../experiments/helpers/database_paths_vis1.json', 'examples/database_paths.json')
