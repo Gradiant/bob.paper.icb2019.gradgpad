@@ -28,8 +28,29 @@ GRAD-GPAD presents two main stages:
     ii) evaluation, where a filtering step is applied, using the already extracted features and the common categorization of the datasets, to train and test over the selected features.
 
 
-How to run my own experiment with our provided framework?
----------------------------------------------------------
+In the time of the publication, the UVAD dataset haven't been parsed yet. Fortunately, now is available in the GRAD-GPAD framework.
+From the following figures we may observe how is distributed the proposed Aggregate Dataset for the Grandtest protocol.
+
+.. image:: img/grad-gpad-grandtest.png
+   :scale: 40 %
+   :alt: proposed_evaluation_framework
+   :align: center
+
+
+.. image:: img/grad-gpad-grandtest-specific.png
+   :scale: 40 %
+   :alt: proposed_evaluation_framework
+   :align: center
+
+
+Note:
+
+    The baseline for evaluation in the GRAD-GPAD without UVAD are the results reported in this paper,
+    whereas the baseline to evaluate with the new version of the GRAD-GPAD (with UVAD) are the results presented in the paper `Deep Anomaly Detection for Generalized Face Anti-Spoofing <https://arxiv.org/pdf/1904.08241.pdf>`_.
+
+
+How to run my own experiment with GRAD-GPAD python framework?
+-------------------------------------------------------------
 
 Once we have available the publicly datasets, we have to create a json with the :code:`ROOT_PATH` of each dataset. Take the following file as an example:
 
@@ -174,3 +195,14 @@ Finally, to run the experiment, just type:
 .. code-block:: sh
 
     bin/algorithmic_constrained_evaluation.py -r experiment/mypad/configuration_mypad.py
+
+
+Can the GRAD-GPAD framework be used in another platform/language/environment?
+-----------------------------------------------------------------------------
+
+The answer is yes, you can. We also provide several text list that define every of the protocols used.
+This list are generated automatically from the framework. If you find any problem, please open an issue to try to solve it.
+
+Find the protocols lists `here <https://github.com/Gradiant/bob.paper.icb2019.gradgpad/tree/master/gradgpad_protocols>`_.
+
+Note that you should modify the :code:`DATABASE-NAME-PLACEHOLDER` in these files for each dataset.
