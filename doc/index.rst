@@ -53,7 +53,7 @@ If you use this framework, please cite the following publications::
       year      = {2019}
     }
 
-    @Inbook{Costa-Pazo2019,
+    @inbook{Costa-Pazo2019,
         author="Costa-Pazo, Artur and Vazquez-Fernandez, Esteban and Alba-Castro, Jos{\'e} Luis and Gonz{\'a}lez-Jim{\'e}nez, Daniel",
         editor="Marcel, S{\'e}bastien and Nixon, Mark S. and Fierrez, Julian and Evans, Nicholas",
         title="Challenges of Face Presentation Attack Detection in Real Scenarios",
