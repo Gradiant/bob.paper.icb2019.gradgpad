@@ -204,3 +204,5 @@ The answer is yes, you can. We also provide several text list that define every 
 This list are generated automatically from the framework. If you find any problem, please open an issue to try to solve it.
 
 Find the protocols lists `here <https://github.com/Gradiant/bob.paper.icb2019.gradgpad/tree/master/gradgpad_protocols>`_.
+
+Note that you should modify the :code:`DATABASE-NAME-PLACEHOLDER` in these files for each dataset.
