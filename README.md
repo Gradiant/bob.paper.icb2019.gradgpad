@@ -1,20 +1,7 @@
-# bob.paper.icb2019.gradgpad 
+# bob.paper.icb2019.gradgpad [![Build Status](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad.svg?branch=master)](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad) [![Doc](http://img.shields.io/badge/docs-latest-green.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/) 
 
-<!---
-[![Build Status](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad.svg?branch=master)](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad) [![Doc](http://img.shields.io/badge/docs-latest-orange.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/)
--->
  
 [Bob](https://www.idiap.ch/software/bob/) package to reproduce the work carried out in the paper [Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal](https://arxiv.org/abs/1904.06213) accepted in the [12th IAPR International Conference On Biometrics](http://www.icb2019.org/).
-
-:construction:
-~~~
-The code will be available at the beginning of May.
-
-Ongoing tasks:
-	- Migrating to python 3
-	- Preparing the environment (with conda)
-	- Preparing docker image
-~~~
 
 ## Abstract 
 
@@ -22,14 +9,34 @@ _Over the past few years, Presentation Attack Detection (PAD) has become a funda
 
 ## Acknowledgements
 
-If you use this framework, please cite the following publication:
+If you use this framework, please cite the following publications:
 
 ~~~
-@INPROCEEDINGS{Costa-Pazo-ICB-2019,
-	title = {Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal},
-	author={Costa-Pazo, Artur and David Jim\'enez-Cabello and V\'azquez-Fern\'andez, Esteban and Alba-Castro, Jos\'e Luis and L\'opez-Sastre, Roberto J.},
-	year = {2019},
-	booktitle={The 12th IAPR International Conference On Biometrics (ICB)}
+@inproceedings{DBLP:conf/icb/Costa-Pazo2019,
+  author    = {Costa-Pazo, Artur and
+               David Jim{\'e}nez-Cabello and
+               Vazquez-Fernandez, Esteban and
+               Alba-Castro, Jos{\'e} Luis and
+               L{\'o}pez-Sastre, Roberto J.
+               },
+  title     = {Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal},
+  booktitle = {2019 International Conference on Biometrics, {ICB} 2019, Crete,
+               Greece, June 4-7, 2019},
+  year      = {2019}
+}
+
+@inbook{Costa-Pazo2019,
+    author="Costa-Pazo, Artur and Vazquez-Fernandez, Esteban and Alba-Castro, Jos{\'e} Luis and Gonz{\'a}lez-Jim{\'e}nez, Daniel",
+    editor="Marcel, S{\'e}bastien and Nixon, Mark S. and Fierrez, Julian and Evans, Nicholas",
+    title="Challenges of Face Presentation Attack Detection in Real Scenarios",
+    bookTitle="Handbook of Biometric Anti-Spoofing: Presentation Attack Detection",
+    year="2019",
+    publisher="Springer International Publishing",
+    address="Cham",
+    pages="247--266",
+    isbn="978-3-319-92627-8",
+    doi="10.1007/978-3-319-92627-8_12",
+    url="https://doi.org/10.1007/978-3-319-92627-8_12"
 }
 ~~~
 
@@ -57,10 +64,8 @@ Hope the following table will help you download publicly available datasets.
 | CS-MAD | [https://www.idiap.ch/dataset/csmad](https://www.idiap.ch/dataset/csmad) | 
 
 
-## Reproducible Research
+For more information about installation, reproducible research and how to use the GRAD-GPAD framework to evaluate your algorithms, please visit the official documentation in [![Doc](http://img.shields.io/badge/docs-latest-green.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/).
 
-TODO
 
-## Installation 
 
-TODO
+

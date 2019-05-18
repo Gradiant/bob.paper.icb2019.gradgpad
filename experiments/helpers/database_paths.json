@@ -1,0 +1,15 @@
+{
+    "CASIA_FASD_PATH": "resources",
+    "REPLAY_ATTACK_PATH": "resources",
+    "THREEDMAD_PATH": "resources",
+    "MSU_MFSD_PATH": "resources",
+    "UVAD_PATH": "resources",
+    "REPLAY_MOBILE_PATH": "resources",
+    "HKBU_PATH": "resources",
+    "OULU_NPU_PATH": "resources",
+    "SMAD": "resources",
+    "ROSE_YOUTU_PATH": "resources",
+    "SIW_PATH": "resources",
+    "CSMAD_PATH": "resources",
+    "CASIA_SURF_PATH": "resources"
+}
