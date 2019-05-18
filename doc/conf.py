@@ -37,6 +37,9 @@ else:
 import shutil
 shutil.copy('../rr.sh', 'examples/rr.sh')
 shutil.copy('../ci.sh', 'examples/ci.sh')
+shutil.copy('../experiments/helpers/database_paths_vis1.json', 'examples/database_paths.json')
+shutil.copy('../experiments/helpers/pipeline_provider.py', 'examples/pipeline_provider.py')
+
 
 # Be picky about warnings
 nitpicky = True

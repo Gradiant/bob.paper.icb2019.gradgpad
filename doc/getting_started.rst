@@ -5,7 +5,7 @@
 Getting started
 ===============
 
-Once you have finished the installation stage. Using the conda environment :code:`bob.paper.icb2019.gradgpad`.
+Once you have finished the installation stage. Please, activate the conda environment :code:`bob.paper.icb2019.gradgpad`.
 
 .. code-block:: sh
 

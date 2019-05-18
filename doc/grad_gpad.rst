@@ -28,3 +28,149 @@ GRAD-GPAD presents two main stages:
     ii) evaluation, where a filtering step is applied, using the already extracted features and the common categorization of the datasets, to train and test over the selected features.
 
 
+How to run my own experiment with our provided framework?
+---------------------------------------------------------
+
+Once we have available the publicly datasets, we have to create a json with the :code:`ROOT_PATH` of each dataset. Take the following file as an example:
+
+.. literalinclude:: examples/database_paths.json
+
+
+To design your Features extractor, just follow the interface :code:`FeaturesExtractor`.
+Create a python file (e.g :code:`bob/paper/icb2019/gradgpad/classes/mypad/mypad_features_extractor.py`)
+
+.. code-block:: python
+    :linenos:
+    :emphasize-lines: 36
+
+    #!/usr/bin/env python
+
+    import numpy as np
+    from bob.gradiant.core import FeaturesExtractor
+    from bob.paper.icb2019.gradgpad.classes.utils.preprocess import preprocess_image
+
+
+    class MyPADFeaturesExtractor(FeaturesExtractor):
+        """
+        Here I can define my PAD algorithm to extract the features
+        """
+
+        def __init__(self, face_crop=False):
+            self.face_crop = face_crop
+            super(MyPADFeaturesExtractor, self).__init__()
+
+        def run(self, dict_images, annotations=None):
+
+            dict_features = {}
+            sorted_keys = sorted(list(dict_images), key=int)
+            for key in sorted_keys:
+                try:
+                    image = dict_images[key]['rgb']
+                except IndexError:
+                    image = dict_images[key]
+
+                if self.face_crop and annotations:
+                    if key not in annotations:
+                        continue
+                    preprocessed_image = preprocess_image(image, annotations[key])
+                    if preprocessed_image is None:
+                        continue
+                    image = preprocessed_image
+
+                #Add here your code
+                features = get_features_from_an_image(image)
+
+                dict_features[key] = features
+            return dict_features
+
+
+We encourage the unit testing of your features extractors to avoid integration bugs. Check the output from different inputs.
+Please, check the test examples in :code:`bob/paper/icb2019/gradgpad/test`.
+
+Then, we should decide the training pipeline. In this repo we have a provider to illustrate this step.
+
+Example (:code:`experiments/helpers/pipeline_provider.py`)
+
+.. literalinclude:: examples/pipeline_provider.py
+
+
+
+Just before running the experiment you should design your experiment filling out a configuration file in order to run all of the evaluation protocols.
+
+For instance, yo can create a file :code:`experiment/mypad/configuration_mypad.py` with the following fields
+
+.. code-block:: python
+    :linenos:
+    :emphasize-lines: 13,21,24
+
+    #!/usr/bin/env python
+    from experiments.helpers.aggregate_database_provider import aggregate_database_provider, get_available_protocols
+    from experiments.helpers.defaults import DEFAULT_DATABASE_PATHS_CONFIG_FILE, \
+        DEFAULT_BASE_RESULT_PATH, DEFAULT_ACCESS_GRID_CONFIG, DEFAULT_NUMBER_THREADS
+    from bob.paper.icb2019.gradgpad import MyPADFeaturesExtractor
+
+    # REQUIRED ARGUMENTS:
+
+    # Database paths:
+    # * You need to add a json file with the information of the databases
+    from experiments.helpers.pipeline_provider import get_pipeline_average_features_scaled_rbfsvc
+
+    database_paths_filename = DEFAULT_DATABASE_PATHS_CONFIG_FILE # <- your previously defined json file
+
+    # Database and protocol:
+    aggregate_database = aggregate_database_provider(database_paths_filename)
+    databases_list = [aggregate_database]
+    protocols_list = get_available_protocols()
+
+    # Feature extraction:
+    feature_extractor = MyPADFeaturesExtractor() # <- your previously defined feature extractor
+
+    # Pipeline:
+    pipeline = get_pipeline_average_features_scaled_rbfsvc('mypad') <- your previously defined training pipeline
+
+    # Result base path:
+    name_feature_extractor = feature_extractor.__class__.__name__.lower().replace('featuresextractor', '')
+    result_path = '{}/{}'.format(DEFAULT_BASE_RESULT_PATH, name_feature_extractor)
+
+    # Framerate and time parameters:
+    access_grid_config = DEFAULT_ACCESS_GRID_CONFIG
+
+    # -----------------------------------------------------------------
+    # OPTIONAL ARGUMENTS:
+
+    # Pad evaluation comparative using the framework bob.gradiant.pad.comparative
+    categorized_scores_plotter = None
+
+    # Verbose (only True/False are valid):
+    verbose = True
+
+    # Number of threads for parallelizing the features extraction:
+    number_threads = DEFAULT_NUMBER_THREADS
+
+    # Data augmentation:
+    use_data_augmentation = False
+
+    # Features extraction:
+    skip_features_extraction = False
+    #extracted_features_path = ''
+    #dict_extracted_features_paths = {'aggregate-database': {'ACE': extracted_features_path}}
+
+    # Training: you can skip training stage
+    skip_training = False
+
+    # Scores prediction:
+    skip_scores_prediction = False
+    dict_scores_paths = dict()
+
+    # Recreate: If it is true, features extraction will be done overwriting previous files
+    recreate = False
+    # -----------------------------------------------------------------
+
+Emphasised lines (13,21,24) can be modified with your own implementation.
+
+
+Finally, to run the experiment, just type:
+
+.. code-block:: sh
+
+    bin/algorithmic_constrained_evaluation.py -r experiment/mypad/configuration_mypad.py

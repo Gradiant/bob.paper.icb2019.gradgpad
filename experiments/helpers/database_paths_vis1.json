@@ -7,7 +7,7 @@
     "REPLAY_MOBILE_PATH": "/media/data/databases/BBDD/AntiSpoofing/replay-mobile/database",
     "HKBU_PATH": "/media/data/databases/BBDD/AntiSpoofing/HKBU",
     "OULU_NPU_PATH": "/media/data/databases/BBDD/AntiSpoofing/OULU_NPU",
-    "SMAD": "/media",
+    "SMAD": "/media/data/databases/BBDD/Antispoofing/SMAD",
     "ROSE_YOUTU_PATH": "/media/data/databases/BBDD/AntiSpoofing/RoseYoutu2008",
     "SIW_PATH": "/media/data/databases/BBDD/AntiSpoofing/SiW",
     "CSMAD_PATH": "/media/data/databases/BBDD/AntiSpoofing/CSMAD"
