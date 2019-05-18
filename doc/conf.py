@@ -2,6 +2,7 @@
 # vim: set fileencoding=utf-8 :
 
 import os
+import shutil
 import sys
 import glob
 import pkg_resources
@@ -34,12 +35,11 @@ if sphinx.__version__ >= "1.4.1":
 else:
     extensions.append('sphinx.ext.pngmath')
 
-import shutil
+os.makedirs('examples')
 shutil.copy('../rr.sh', 'examples/rr.sh')
 shutil.copy('../ci.sh', 'examples/ci.sh')
 shutil.copy('../experiments/helpers/database_paths_vis1.json', 'examples/database_paths.json')
 shutil.copy('../experiments/helpers/pipeline_provider.py', 'examples/pipeline_provider.py')
-
 
 # Be picky about warnings
 nitpicky = True
