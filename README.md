@@ -64,7 +64,7 @@ Hope the following table will help you download publicly available datasets.
 | CS-MAD | [https://www.idiap.ch/dataset/csmad](https://www.idiap.ch/dataset/csmad) | 
 
 
-For more information about installation, reproducible research and how to use the GRAD-GPAD framework to evaluate your algorithms, please visit the official documentation [![Doc](http://img.shields.io/badge/docs-latest-green.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/).
+For more information about installation, reproducible research and how to use the GRAD-GPAD framework to evaluate your algorithms, please visit the official documentation in [![Doc](http://img.shields.io/badge/docs-latest-green.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/).
 
 
 
