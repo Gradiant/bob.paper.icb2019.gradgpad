@@ -32,6 +32,7 @@ setup(
             'create_summary_table.py = bob.paper.icb2019.gradgpad.scripts.create_summary_table:main',
             'download_resources.py = bob.paper.icb2019.gradgpad.scripts.download_resources:main',
             'generate_grad_gpad_protocols_text_lists.py = bob.paper.icb2019.gradgpad.scripts.generate_grad_gpad_protocols_text_lists:main',
+            'examples_of_each_category.py = bob.paper.icb2019.gradgpad.scripts.examples_of_each_category:main'
         ],
     },
 )
