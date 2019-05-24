@@ -1,14 +1,17 @@
 {
-    "CASIA_FASD_PATH": "/media/data/databases/BBDD/AntiSpoofing/CASIA_FASD",
-    "REPLAY_ATTACK_PATH": "/media/data/databases/BBDD/AntiSpoofing/replay-attack/Movies",
-    "THREEDMAD_PATH": "/media/data/databases/BBDD/AntiSpoofing/3DMAD/Data",
-    "MSU_MFSD_PATH": "/media/data/databases/BBDD/AntiSpoofing/MSU_MFSD/MSU-MFSD/scene01",
-    "UVAD_PATH": "/media/data/databases/BBDD/AntiSpoofing/UVAD",
-    "REPLAY_MOBILE_PATH": "/media/data/databases/BBDD/AntiSpoofing/replay-mobile/database",
-    "HKBU_PATH": "/media/data/databases/BBDD/AntiSpoofing/HKBU",
-    "OULU_NPU_PATH": "/media/data/databases/BBDD/AntiSpoofing/OULU_NPU",
-    "SMAD": "/media/data/databases/BBDD/Antispoofing/SMAD",
-    "ROSE_YOUTU_PATH": "/media/data/databases/BBDD/AntiSpoofing/RoseYoutu2008",
-    "SIW_PATH": "/media/data/databases/BBDD/AntiSpoofing/SiW",
-    "CSMAD_PATH": "/media/data/databases/BBDD/AntiSpoofing/CSMAD"
+    "CASIA_FASD_PATH": "/media/BM/databases/Antispoofing/CASIA_FASD",
+    "REPLAY_ATTACK_PATH": "/media/BM/databases/Antispoofing/replay-attack/Movies",
+    "THREEDMAD_PATH": "/media/BM/databases/Antispoofing/3DMAD/Data",
+    "MSU_MFSD_PATH": "/media/BM/databases/Antispoofing/MSU_MFSD/MSU-MFSD/scene01",
+    "UVAD_PATH": "/media/BM/databases/Antispoofing/UVAD",
+    "REPLAY_MOBILE_PATH": "/media/BM/databases/Antispoofing/replay-mobile/database",
+    "HKBU_PATH": "/media/BM/databases/Antispoofing/HKBU",
+    "OULU_NPU_PATH": "/media/BM/databases/Antispoofing/OULU_NPU",
+    "SMAD": "/media/BM/databases/Antispoofing/SMAD",
+    "ROSE_YOUTU_PATH": "/media/BM/databases/Antispoofing/RoseYoutu2008",
+    "SIW_PATH": "/media/BM/databases/Antispoofing/SiW",
+    "CSMAD_PATH": "/media/BM/databases/Antispoofing/CSMAD",
+    "CASIA_SURF_PATH" : "/media/BM/databases/Antispoofing/"
 }
+
+
