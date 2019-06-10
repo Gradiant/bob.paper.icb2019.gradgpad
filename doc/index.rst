@@ -112,6 +112,7 @@ Documentation
    getting_started
    reproducible_research
    grad_gpad
+   icb
    acknowledgements
 
 Indices and tables
