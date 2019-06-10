@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The GRAD-GPAD framework &mdash; bob.paper.icb2019.gradgpad 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ICB 2019" href="icb.html" />
+    <link rel="prev" title="Reproducible Research" href="reproducible_research.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> bob.paper.icb2019.gradgpad
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_research.html">Reproducible Research</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The GRAD-GPAD framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-run-my-own-experiment-with-grad-gpad-python-framework">How to run my own experiment with GRAD-GPAD python framework?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#can-the-grad-gpad-framework-be-used-in-another-platform-language-environment">Can the GRAD-GPAD framework be used in another platform/language/environment?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="icb.html">ICB 2019</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bob.paper.icb2019.gradgpad</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>The GRAD-GPAD framework</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/grad_gpad.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-grad-gpad-framework">
+<h1>The GRAD-GPAD framework<a class="headerlink" href="#the-grad-gpad-framework" title="Permalink to this headline">¶</a></h1>
+<p>In this paper, we present a novel evaluation framework to help the research community to address the problem of generalization in face-PAD. Our framework is publicly available as a Python package under the acronym
+GRAD-GPAD (Generalization Representation over Aggregated Datasets for Generalized Presentation Attack Detection). This framework provides a common taxonomy of existing datasets and allows to evaluate face-PAD algorithms
+from additional points of view, revealing new interesting properties. The GRAD-GPAD framework is extendable and scalable by design. This will help researchers to create new
+protocols, to define categorizations over different datasets in order to make them compatible, and to enable the addition of new datasets.</p>
+<p>The GRAD-GPAD framework has a top-down design and provides a very convenient level of abstraction. The following figure shows the proposed dataset evaluation pipeline, where circles with dotted lines represent the customizable and easyto-extend elements. Each of these elements in the framework follows a specific interface to work properly. Thus,
+we can add, for instance, a new Dataset (e.g. using some videos recorded for an specific use case), or a new implementation of a Feature Extractor to evaluate an algorithm
+or even create an ad-hoc Protocol.</p>
+<a class="reference internal image-reference" href="_images/diagram_framework_icb2019.png"><img alt="proposed_evaluation_framework" class="align-center" src="_images/diagram_framework_icb2019.png" style="width: 780.0px; height: 419.5px;" /></a>
+<p>Figure 1: Overview of GRAD-GPAD evaluation framework</p>
+<p>GRAD-GPAD presents two main stages:</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><p>feature extraction, where features are computed for each input video applying a preprocessing step and following the interface of the Feature Extractor; and</p></li>
+<li><p>evaluation, where a filtering step is applied, using the already extracted features and the common categorization of the datasets, to train and test over the selected features.</p></li>
+</ol>
+</div></blockquote>
+<p>In the time of the publication, the UVAD dataset haven’t been parsed yet. Fortunately, now is available in the GRAD-GPAD framework.
+From the following figures we may observe how is distributed the proposed Aggregate Dataset for the Grandtest protocol.</p>
+<a class="reference internal image-reference" href="_images/grad-gpad-grandtest.png"><img alt="proposed_evaluation_framework" class="align-center" src="_images/grad-gpad-grandtest.png" style="width: 480.0px; height: 296.8px;" /></a>
+<a class="reference internal image-reference" href="_images/grad-gpad-grandtest-specific.png"><img alt="proposed_evaluation_framework" class="align-center" src="_images/grad-gpad-grandtest-specific.png" style="width: 480.0px; height: 296.8px;" /></a>
+<p>Note:</p>
+<blockquote>
+<div><p>The baseline for evaluation in the GRAD-GPAD without UVAD are the results reported in this paper,
+whereas the baseline to evaluate with the new version of the GRAD-GPAD (with UVAD) are the results presented in the paper <a class="reference external" href="https://arxiv.org/pdf/1904.08241.pdf">Deep Anomaly Detection for Generalized Face Anti-Spoofing</a>.</p>
+</div></blockquote>
+<div class="section" id="how-to-run-my-own-experiment-with-grad-gpad-python-framework">
+<h2>How to run my own experiment with GRAD-GPAD python framework?<a class="headerlink" href="#how-to-run-my-own-experiment-with-grad-gpad-python-framework" title="Permalink to this headline">¶</a></h2>
+<p>Once we have available the publicly datasets, we have to create a json with the <code class="code docutils literal notranslate"><span class="pre">ROOT_PATH</span></code> of each dataset. Take the following file as an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;CASIA_FASD_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/CASIA_FASD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;REPLAY_ATTACK_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/replay-attack/Movies&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;THREEDMAD_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/3DMAD/Data&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MSU_MFSD_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/MSU_MFSD/MSU-MFSD/scene01&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;UVAD_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/UVAD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;REPLAY_MOBILE_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/replay-mobile/database&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;HKBU_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/HKBU&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;OULU_NPU_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/OULU_NPU&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SMAD&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/Antispoofing/SMAD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ROSE_YOUTU_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/RoseYoutu2008&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SIW_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/SiW&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CSMAD_PATH&quot;</span><span class="p">:</span> <span class="s2">&quot;/media/data/databases/BBDD/AntiSpoofing/CSMAD&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To design your Features extractor, just follow the interface <code class="code docutils literal notranslate"><span class="pre">FeaturesExtractor</span></code>.
+Create a python file (e.g <code class="code docutils literal notranslate"><span class="pre">bob/paper/icb2019/gradgpad/classes/mypad/mypad_features_extractor.py</span></code>)</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">bob.gradiant.core</span> <span class="kn">import</span> <span class="n">FeaturesExtractor</span>
+<span class="kn">from</span> <span class="nn">bob.paper.icb2019.gradgpad.classes.utils.preprocess</span> <span class="kn">import</span> <span class="n">preprocess_image</span>
+
+
+<span class="k">class</span> <span class="nc">MyPADFeaturesExtractor</span><span class="p">(</span><span class="n">FeaturesExtractor</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Here I can define my PAD algorithm to extract the features</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">face_crop</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">face_crop</span> <span class="o">=</span> <span class="n">face_crop</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MyPADFeaturesExtractor</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dict_images</span><span class="p">,</span> <span class="n">annotations</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+        <span class="n">dict_features</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">sorted_keys</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">dict_images</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">sorted_keys</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">dict_images</span><span class="p">[</span><span class="n">key</span><span class="p">][</span><span class="s1">&#39;rgb&#39;</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">dict_images</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">face_crop</span> <span class="ow">and</span> <span class="n">annotations</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">annotations</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">preprocessed_image</span> <span class="o">=</span> <span class="n">preprocess_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">annotations</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">preprocessed_image</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                    <span class="k">continue</span>
+                <span class="n">image</span> <span class="o">=</span> <span class="n">preprocessed_image</span>
+
+            <span class="c1">#Add here your code</span>
+<span class="hll">            <span class="n">features</span> <span class="o">=</span> <span class="n">get_features_from_an_image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</span>
+            <span class="n">dict_features</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">features</span>
+        <span class="k">return</span> <span class="n">dict_features</span>
+</pre></div>
+</td></tr></table></div>
+<p>We encourage the unit testing of your features extractors to avoid integration bugs. Check the output from different inputs.
+Please, check the test examples in <code class="code docutils literal notranslate"><span class="pre">bob/paper/icb2019/gradgpad/test</span></code>.</p>
+<p>Then, we should decide the training pipeline. In this repo we have a provider to illustrate this step.</p>
+<p>Example (<code class="code docutils literal notranslate"><span class="pre">experiments/helpers/pipeline_provider.py</span></code>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bob.gradiant.pipelines</span> <span class="k">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">FeaturesScaleNormalizer</span><span class="p">,</span> <span class="n">AverageFeatures</span><span class="p">,</span> <span class="n">RbfSvc</span>
+
+
+<span class="k">def</span> <span class="nf">get_pipeline_average_features_scaled_rbfsvc</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="p">[</span><span class="n">AverageFeatures</span><span class="p">(),</span>
+                               <span class="n">FeaturesScaleNormalizer</span><span class="p">(),</span>
+                               <span class="n">RbfSvc</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;RbfSvc&#39;</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="n">pipeline</span>
+
+
+</pre></div>
+</div>
+<p>Just before running the experiment you should design your experiment filling out a configuration file in order to run all of the evaluation protocols.</p>
+<p>For instance, yo can create a file <code class="code docutils literal notranslate"><span class="pre">experiment/mypad/configuration_mypad.py</span></code> with the following fields</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="kn">from</span> <span class="nn">experiments.helpers.aggregate_database_provider</span> <span class="kn">import</span> <span class="n">aggregate_database_provider</span><span class="p">,</span> <span class="n">get_available_protocols</span>
+<span class="kn">from</span> <span class="nn">experiments.helpers.defaults</span> <span class="kn">import</span> <span class="n">DEFAULT_DATABASE_PATHS_CONFIG_FILE</span><span class="p">,</span> \
+    <span class="n">DEFAULT_BASE_RESULT_PATH</span><span class="p">,</span> <span class="n">DEFAULT_ACCESS_GRID_CONFIG</span><span class="p">,</span> <span class="n">DEFAULT_NUMBER_THREADS</span>
+<span class="kn">from</span> <span class="nn">bob.paper.icb2019.gradgpad</span> <span class="kn">import</span> <span class="n">MyPADFeaturesExtractor</span>
+
+<span class="c1"># REQUIRED ARGUMENTS:</span>
+
+<span class="c1"># Database paths:</span>
+<span class="c1"># * You need to add a json file with the information of the databases</span>
+<span class="kn">from</span> <span class="nn">experiments.helpers.pipeline_provider</span> <span class="kn">import</span> <span class="n">get_pipeline_average_features_scaled_rbfsvc</span>
+
+<span class="hll"><span class="n">database_paths_filename</span> <span class="o">=</span> <span class="n">DEFAULT_DATABASE_PATHS_CONFIG_FILE</span> <span class="c1"># &lt;- your previously defined json file</span>
+</span>
+<span class="c1"># Database and protocol:</span>
+<span class="n">aggregate_database</span> <span class="o">=</span> <span class="n">aggregate_database_provider</span><span class="p">(</span><span class="n">database_paths_filename</span><span class="p">)</span>
+<span class="n">databases_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">aggregate_database</span><span class="p">]</span>
+<span class="n">protocols_list</span> <span class="o">=</span> <span class="n">get_available_protocols</span><span class="p">()</span>
+
+<span class="c1"># Feature extraction:</span>
+<span class="hll"><span class="n">feature_extractor</span> <span class="o">=</span> <span class="n">MyPADFeaturesExtractor</span><span class="p">()</span> <span class="c1"># &lt;- your previously defined feature extractor</span>
+</span>
+<span class="c1"># Pipeline:</span>
+<span class="hll"><span class="n">pipeline</span> <span class="o">=</span> <span class="n">get_pipeline_average_features_scaled_rbfsvc</span><span class="p">(</span><span class="s1">&#39;mypad&#39;</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="n">your</span> <span class="n">previously</span> <span class="n">defined</span> <span class="n">training</span> <span class="n">pipeline</span>
+</span>
+<span class="c1"># Result base path:</span>
+<span class="n">name_feature_extractor</span> <span class="o">=</span> <span class="n">feature_extractor</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;featuresextractor&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">result_path</span> <span class="o">=</span> <span class="s1">&#39;{}/{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">DEFAULT_BASE_RESULT_PATH</span><span class="p">,</span> <span class="n">name_feature_extractor</span><span class="p">)</span>
+
+<span class="c1"># Framerate and time parameters:</span>
+<span class="n">access_grid_config</span> <span class="o">=</span> <span class="n">DEFAULT_ACCESS_GRID_CONFIG</span>
+
+<span class="c1"># -----------------------------------------------------------------</span>
+<span class="c1"># OPTIONAL ARGUMENTS:</span>
+
+<span class="c1"># Pad evaluation comparative using the framework bob.gradiant.pad.comparative</span>
+<span class="n">categorized_scores_plotter</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="c1"># Verbose (only True/False are valid):</span>
+<span class="n">verbose</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c1"># Number of threads for parallelizing the features extraction:</span>
+<span class="n">number_threads</span> <span class="o">=</span> <span class="n">DEFAULT_NUMBER_THREADS</span>
+
+<span class="c1"># Data augmentation:</span>
+<span class="n">use_data_augmentation</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c1"># Features extraction:</span>
+<span class="n">skip_features_extraction</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="c1">#extracted_features_path = &#39;&#39;</span>
+<span class="c1">#dict_extracted_features_paths = {&#39;aggregate-database&#39;: {&#39;ACE&#39;: extracted_features_path}}</span>
+
+<span class="c1"># Training: you can skip training stage</span>
+<span class="n">skip_training</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c1"># Scores prediction:</span>
+<span class="n">skip_scores_prediction</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">dict_scores_paths</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="c1"># Recreate: If it is true, features extraction will be done overwriting previous files</span>
+<span class="n">recreate</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="c1"># -----------------------------------------------------------------</span>
+</pre></div>
+</td></tr></table></div>
+<p>Emphasised lines (13,21,24) can be modified with your own implementation.</p>
+<p>Finally, to run the experiment, just type:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>bin/algorithmic_constrained_evaluation.py -r experiment/mypad/configuration_mypad.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="can-the-grad-gpad-framework-be-used-in-another-platform-language-environment">
+<h2>Can the GRAD-GPAD framework be used in another platform/language/environment?<a class="headerlink" href="#can-the-grad-gpad-framework-be-used-in-another-platform-language-environment" title="Permalink to this headline">¶</a></h2>
+<p>The answer is yes, you can. We also provide several text list that define every of the protocols used.
+This list are generated automatically from the framework. If you find any problem, please open an issue to try to solve it.</p>
+<p>Find the protocols lists <a class="reference external" href="https://github.com/Gradiant/bob.paper.icb2019.gradgpad/tree/master/gradgpad_protocols">here</a>.</p>
+<p>Note that you should modify the <code class="code docutils literal notranslate"><span class="pre">DATABASE-NAME-PLACEHOLDER</span></code> in these files for each dataset.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="icb.html" class="btn btn-neutral float-right" title="ICB 2019" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="reproducible_research.html" class="btn btn-neutral" title="Reproducible Research" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gradiant
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

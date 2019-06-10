@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal &mdash; bob.paper.icb2019.gradgpad 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation" href="installation.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> bob.paper.icb2019.gradgpad
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_research.html">Reproducible Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grad_gpad.html">The GRAD-GPAD framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icb.html">ICB 2019</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">bob.paper.icb2019.gradgpad</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="generalized-presentation-attack-detection-a-face-anti-spoofing-evaluation-proposal">
+<h1>Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal<a class="headerlink" href="#generalized-presentation-attack-detection-a-face-anti-spoofing-evaluation-proposal" title="Permalink to this headline">¶</a></h1>
+<p>Bob package to reproduce the work carried out in chapter <a class="reference external" href="https://arxiv.org/abs/1904.06213">Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal</a> in the International Conference on Biometrics, ICB 2019.
+This package contains scripts to reproduce the results from the paper. The GRAD-GPAD is designed on the top of the frameworks presented in the chapter <a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-319-92627-8_12">Challenges of Face Presentation Attack Detection in Real Scenarios</a>
+in the Handbook of Biometric Anti-Spoofing, where from different protocols some of the gaps between research and real scenario deployments, including generalisation, usability, and performance were analysed.</p>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>Over the past few years, Presentation Attack Detection
+(PAD) has become a fundamental part of facial recognition
+systems. Although much effort has been devoted to antispoofing
+research, generalization in real scenarios remains
+a challenge. In this paper we present a new open-source
+evaluation framework to study the generalization capacity
+of face Presentation Attack Detection methods, coined here
+as face-GPAD. This framework facilitates the creation of
+new protocols focused on the generalization problem and
+sets fair procedures of evaluation and comparison between
+PAD solutions. We also introduce a large aggregated and
+categorized dataset to address the problem of incompatibility
+between publicly available datasets. Finally, we propose
+a benchmark adding two novel evaluation protocols: one
+for measuring the effect introduced by the variations in face
+resolution, and the second for evaluating the influence of
+adversarial operating conditions.</p>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<p>If you use this framework, please cite the following publications:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@inproceedings</span><span class="p">{</span><span class="n">DBLP</span><span class="p">:</span><span class="n">conf</span><span class="o">/</span><span class="n">icb</span><span class="o">/</span><span class="n">Costa</span><span class="o">-</span><span class="n">Pazo2019</span><span class="p">,</span>
+  <span class="n">author</span>    <span class="o">=</span> <span class="p">{</span><span class="n">Costa</span><span class="o">-</span><span class="n">Pazo</span><span class="p">,</span> <span class="n">Artur</span> <span class="ow">and</span>
+               <span class="n">David</span> <span class="n">Jim</span><span class="p">{</span>\<span class="s1">&#39;e}nez-Cabello and</span>
+               <span class="n">Vazquez</span><span class="o">-</span><span class="n">Fernandez</span><span class="p">,</span> <span class="n">Esteban</span> <span class="ow">and</span>
+               <span class="n">Alba</span><span class="o">-</span><span class="n">Castro</span><span class="p">,</span> <span class="n">Jos</span><span class="p">{</span>\<span class="s1">&#39;e} Luis and</span>
+               <span class="n">L</span><span class="p">{</span>\<span class="s1">&#39;o}pez-Sastre, Roberto J.</span>
+               <span class="p">},</span>
+  <span class="n">title</span>     <span class="o">=</span> <span class="p">{</span><span class="n">Generalized</span> <span class="n">Presentation</span> <span class="n">Attack</span> <span class="n">Detection</span><span class="p">:</span> <span class="n">a</span> <span class="n">face</span> <span class="n">anti</span><span class="o">-</span><span class="n">spoofing</span> <span class="n">evaluation</span> <span class="n">proposal</span><span class="p">},</span>
+  <span class="n">booktitle</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2019</span> <span class="n">International</span> <span class="n">Conference</span> <span class="n">on</span> <span class="n">Biometrics</span><span class="p">,</span> <span class="p">{</span><span class="n">ICB</span><span class="p">}</span> <span class="mi">2019</span><span class="p">,</span> <span class="n">Crete</span><span class="p">,</span>
+               <span class="n">Greece</span><span class="p">,</span> <span class="n">June</span> <span class="mi">4</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2019</span><span class="p">},</span>
+  <span class="n">year</span>      <span class="o">=</span> <span class="p">{</span><span class="mi">2019</span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nd">@inbook</span><span class="p">{</span><span class="n">Costa</span><span class="o">-</span><span class="n">Pazo2019</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="s2">&quot;Costa-Pazo, Artur and Vazquez-Fernandez, Esteban and Alba-Castro, Jos{</span><span class="se">\&#39;</span><span class="s2">e} Luis and Gonz{</span><span class="se">\&#39;</span><span class="s2">a}lez-Jim{</span><span class="se">\&#39;</span><span class="s2">e}nez, Daniel&quot;</span><span class="p">,</span>
+    <span class="n">editor</span><span class="o">=</span><span class="s2">&quot;Marcel, S{</span><span class="se">\&#39;</span><span class="s2">e}bastien and Nixon, Mark S. and Fierrez, Julian and Evans, Nicholas&quot;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Challenges of Face Presentation Attack Detection in Real Scenarios&quot;</span><span class="p">,</span>
+    <span class="n">bookTitle</span><span class="o">=</span><span class="s2">&quot;Handbook of Biometric Anti-Spoofing: Presentation Attack Detection&quot;</span><span class="p">,</span>
+    <span class="n">year</span><span class="o">=</span><span class="s2">&quot;2019&quot;</span><span class="p">,</span>
+    <span class="n">publisher</span><span class="o">=</span><span class="s2">&quot;Springer International Publishing&quot;</span><span class="p">,</span>
+    <span class="n">address</span><span class="o">=</span><span class="s2">&quot;Cham&quot;</span><span class="p">,</span>
+    <span class="n">pages</span><span class="o">=</span><span class="s2">&quot;247--266&quot;</span><span class="p">,</span>
+    <span class="n">isbn</span><span class="o">=</span><span class="s2">&quot;978-3-319-92627-8&quot;</span><span class="p">,</span>
+    <span class="n">doi</span><span class="o">=</span><span class="s2">&quot;10.1007/978-3-319-92627-8_12&quot;</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://doi.org/10.1007/978-3-319-92627-8_12&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="disclaimer">
+<h2>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h2>
+<p>Third party publicly available datasets are not managed by Gradiant.
+To access them, please contact each of the institutions responsible for
+each dataset. The license for the use of these datasets must be consulted
+with each institution.</p>
+<p>Hope the following table will help you download publicly available datasets.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Dataset</p></th>
+<th class="head"><p>Link</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>REPLAY-ATTACK</p></td>
+<td><p><a class="reference external" href="https://www.idiap.ch/dataset/replayattack">https://www.idiap.ch/dataset/replayattack</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>3DMAD</p></td>
+<td><p><a class="reference external" href="https://www.idiap.ch/dataset/3dmad">https://www.idiap.ch/dataset/3dmad</a></p></td>
+</tr>
+<tr class="row-even"><td><p>MSU-MFSD</p></td>
+<td><p><a class="reference external" href="http://biometrics.cse.msu.edu/Publications/Databases/MSUMobileFaceSpoofing/index.htm">http://biometrics.cse.msu.edu/Publications/Databases/MSUMobileFaceSpoofing/index.htm</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>UVAD</p></td>
+<td><p><a class="reference external" href="https://recodbr.wordpress.com/code-n-data/#UVAD">https://recodbr.wordpress.com/code-n-data/#UVAD</a></p></td>
+</tr>
+<tr class="row-even"><td><p>REPLAY-MOBILE</p></td>
+<td><p><a class="reference external" href="https://www.idiap.ch/dataset/replay-mobile">https://www.idiap.ch/dataset/replay-mobile</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>HKBU (v1)</p></td>
+<td><p><a class="reference external" href="http://rds.comp.hkbu.edu.hk/mars/">http://rds.comp.hkbu.edu.hk/mars/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>OULU-NPU</p></td>
+<td><p><a class="reference external" href="https://sites.google.com/site/oulunpudatabase/">https://sites.google.com/site/oulunpudatabase/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ROSE-YOUTU</p></td>
+<td><p><a class="reference external" href="http://rose1.ntu.edu.sg/Datasets/faceLivenessDetection.asp">http://rose1.ntu.edu.sg/Datasets/faceLivenessDetection.asp</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SIW</p></td>
+<td><p><a class="reference external" href="http://cvlab.cse.msu.edu/spoof-in-the-wild-siw-face-anti-spoofing-database.html">http://cvlab.cse.msu.edu/spoof-in-the-wild-siw-face-anti-spoofing-database.html</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CS-MAD</p></td>
+<td><p><a class="reference external" href="https://www.idiap.ch/dataset/csmad">https://www.idiap.ch/dataset/csmad</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-with-docker">Installation With Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-with-conda">Installation With Conda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#buildout">Buildout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#test">Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#clean">Clean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#coverage">Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#doc">Doc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html#continuous-integration">Continuous Integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_research.html">Reproducible Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grad_gpad.html">The GRAD-GPAD framework</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="grad_gpad.html#how-to-run-my-own-experiment-with-grad-gpad-python-framework">How to run my own experiment with GRAD-GPAD python framework?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grad_gpad.html#can-the-grad-gpad-framework-be-used-in-another-platform-language-environment">Can the GRAD-GPAD framework be used in another platform/language/environment?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="icb.html">ICB 2019</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="icb.html#poster">Poster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="icb.html#photos">Photos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gradiant
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

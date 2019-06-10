@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; bob.paper.icb2019.gradgpad 1.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started" href="getting_started.html" />
+    <link rel="prev" title="Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> bob.paper.icb2019.gradgpad
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-with-docker">Installation With Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-with-conda">Installation With Conda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reproducible_research.html">Reproducible Research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grad_gpad.html">The GRAD-GPAD framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icb.html">ICB 2019</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">bob.paper.icb2019.gradgpad</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation-with-docker">
+<h2>Installation With Docker<a class="headerlink" href="#installation-with-docker" title="Permalink to this headline">¶</a></h2>
+<p>The fastest way to contact the package is to use docker.</p>
+<p>You can download the docker image from dockerhub</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker pull acostapazo/bob.paper.icb2019.gradgpad:latest
+</pre></div>
+</div>
+<p>or build it from Dockerfile</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker build --no-cache -t acostapazo/bob.paper.icb2019.gradgpad:latest .
+</pre></div>
+</div>
+<p>To check that everything is going well, use:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker run <span class="se">\</span>
+    -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/bob.paper.icb2019.gradgpad acostapazo/bob.paper.icb2019.gradgpad:latest <span class="se">\</span>
+    bin/bash -c <span class="s2">&quot;source activate bob.paper.icb2019.gradgpad; \</span>
+<span class="s2">                 cd bob.paper.icb2019.gradgpad; \</span>
+<span class="s2">                 ./ci.sh&quot;</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>This command will execute the following steps</dt><dd><ul class="simple">
+<li><p>mount a the code as a volume (<code class="code docutils literal notranslate"><span class="pre">-v</span> <span class="pre">$(pwd):/bob.paper.icb2019.gradgpad</span></code>)</p></li>
+<li><p>activate the conda environment (<code class="code docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">bob.paper.icb2019.gradgpad</span></code>)</p></li>
+<li><p>move to mounted path (<code class="code docutils literal notranslate"><span class="pre">cd</span> <span class="pre">bob.paper.icb2019.gradgpad</span></code>)</p></li>
+<li><p>execute continuous integration script (<code class="code docutils literal notranslate"><span class="pre">ci.sh</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="installation-with-conda">
+<h2>Installation With Conda<a class="headerlink" href="#installation-with-conda" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Install <a class="reference external" href="https://conda.io/docs/user-guide/install/index.html">conda</a></p></li>
+<li><p>Create a conda env</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda env create -f envs/ubuntu_environment.yml
+</pre></div>
+</div>
+<p>or if run this in macosx platform</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda env create -f envs/mac_environment.yml
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Activate the environment and add some channels</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> activate bob.paper.icb2019.gradgpad
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Gradiant
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
