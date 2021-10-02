@@ -1,6 +1,9 @@
 # bob.paper.icb2019.gradgpad [![Build Status](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad.svg?branch=master)](https://travis-ci.org/Gradiant/bob.paper.icb2019.gradgpad) [![Doc](http://img.shields.io/badge/docs-latest-green.svg)](https://gradiant.github.io/bob.paper.icb2019.gradgpad/) 
 
  
+ 👉 👉 New version of `gradgpad` (v2) is already available in [https://github.com/acostapazo/gradgpad](https://github.com/acostapazo/gradgpad) 🗿 👈 👈
+ 
+ 
 [Bob](https://www.idiap.ch/software/bob/) package to reproduce the work carried out in the paper [Generalized Presentation Attack Detection: a face anti-spoofing evaluation proposal](https://arxiv.org/abs/1904.06213) accepted in the [12th IAPR International Conference On Biometrics](http://www.icb2019.org/).
 
 ## Abstract 
